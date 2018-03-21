@@ -42,9 +42,3 @@ Go back to the project directory and run
 To install the depdendencies listed in Gemfile use:
 
 `$ bundle`
-
-## Installing js dependencies
-In the app folder
-
-`$ npm i`
-
