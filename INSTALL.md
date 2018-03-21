@@ -57,15 +57,3 @@ In the app folder
 
 `$ npm i`
 
-## Running the app
-
-To run the process in production mode, when you don't want to alter the javascript, you do:
-
-```
-$ npm run build  # Compile the javascript
-$ rake  # Run the sinatra server
-```
-
-To run the process in development in port 4000, this is to modify react components.
-
-`$ rake server:dev`
