@@ -1,14 +1,5 @@
 # Requirements
 
-## Installing Node.js
-
-```
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-$ source ~/.bashrc
-$ nvm install --lts
-$ nvm use node
-```
-
 ## Installing rbenv
 
 Execute the following commands, but use your ~/.bashrc file instead of ~/.bash_profile if you are working in Ubuntu.
