@@ -42,3 +42,9 @@ Go back to the project directory and run
 To install the depdendencies listed in Gemfile use:
 
 `$ bundle`
+
+## Running the code
+
+To start the server, run:
+
+`$ rake`
