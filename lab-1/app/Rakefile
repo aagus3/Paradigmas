@@ -1,0 +1,7 @@
+task default: ['server:run']
+
+namespace :server do
+  task :run do
+    exec 'rackup'
+  end
+end
