@@ -110,3 +110,66 @@ class Model
     # ...
   end
 end
+
+  # Se define la clase Usuario, que contendrá variables que 
+  #compartiran los consumidores y los proveedores 
+class Usuario
+  @Characters nombreUsuario
+  @Characters direccion
+  @Characters contrasena
+end
+
+class Consumer
+  attr_reader :nombreUsuario, :direccion, :contrasena
+
+  def initialize(nombreUsuario, direccion, contrasena)
+      @nombreUsuario = nombreUsuario
+      @direccion = name
+      @contrasena = addr
+  end
+end
+
+class Provider
+  attr_reader :nombreUsuario, :direccion, :contrasena, :nombreNegocio, 
+              :disMaxima, :saldo
+
+  def initialize(nombreUsuario, direccion, contrasena, nombreNegocio,
+                 disMaxima, saldo)
+      @nombreUsuario = nombreUsuario
+      @direccion = name
+      @contrasena = addr
+      @nombreNegocio = nombreNegocio
+      @disMaxima = disMaxima
+      @saldo = saldo
+  end
+
+  #def crearPedido(items)
+  #  items["Papas"] = ""
+    
+  
+end
+  
+class Location
+  attr_reader :lugar, :coordenada_x, :coordenada_y
+
+  def initialize(lugar, x, y)
+      @lugar = lugar
+      @coordenada_x = x
+      @coordenada_y = y
+  end  
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
