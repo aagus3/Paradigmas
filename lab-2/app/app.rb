@@ -10,6 +10,21 @@ class DeliveruApp < Sinatra::Application
 
   enable :sessions unless test?
 
+  configure :development do
+    pid = begin
+            File.read('./node.pid')
+          rescue StandardError
+            nil
+          end
+
+    if pid.nil?
+      ## Start the node server to run React
+      pid = Process.spawn('npm run dev')
+      Process.detach(pid)
+      File.write('./node.pid', pid.to_s)
+    end
+  end
+
   ## Function to clean up the json requests.
   before do
     begin

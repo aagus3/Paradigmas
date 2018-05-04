@@ -22,21 +22,31 @@ def load_model(model_class)
 end
 
 warmup do
-  puts 'Loading objects from json files'
+  # puts 'Loading objects from json files'
   load_model(Locations)
   load_model(Consumer)
   load_model(Provider)
   load_model(Item)
   load_model(Order)
-  
-  # TODO: load the models from the json files. This tasks executes after
-  # the server is loaded. Use the function load_model defined above.
 end
 
 # Setting up routes
 ROUTES = {
   '/' => DeliveruApp
 }
+
+## For development environment use a proxy to the React App
+configure :development do
+  # Class to act as proxy for the react server, which will run in port 3000
+  class AppProxy < Rack::Proxy
+    def rewrite_env(env)
+      env['HTTP_HOST'] = 'localhost:3000'
+      env
+    end
+  end
+
+  ROUTES['/static'] = AppProxy.new
+end
 
 # Run the application
 run Rack::URLMap.new(ROUTES)

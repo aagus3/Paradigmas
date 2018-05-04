@@ -1,0 +1,12 @@
+task default: ['server:dev']
+
+namespace :server do
+  task :dev do
+    system 'rm -rf ./node.pid'
+    exec 'rackup'
+  end
+
+  task :run do
+    exec 'rackup -E production'
+  end
+end
